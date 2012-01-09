@@ -14,16 +14,21 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		C9A42A6E12BDB17C00959D84 /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42A6912BDB17C00959D84 /* PageCell.m */; };
-		C9A42A6F12BDB17C00959D84 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42A6B12BDB17C00959D84 /* PageViewController.m */; };
-		C9A42A7012BDB17C00959D84 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42A6D12BDB17C00959D84 /* LabelCell.m */; };
-		C9A42B8A12BDBAA100959D84 /* PageCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42B8912BDBAA100959D84 /* PageCellBackground.m */; };
-		C9A42B9312BDBC2E00959D84 /* RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42B9212BDBC2E00959D84 /* RoundRect.m */; };
+		ACBD0F1B14BBB0D000C2FC3C /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0014BBB0D000C2FC3C /* ButtonCell.m */; };
+		ACBD0F1C14BBB0D000C2FC3C /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBD0F0114BBB0D000C2FC3C /* ButtonCell.xib */; };
+		ACBD0F1D14BBB0D000C2FC3C /* LabelCell+Selectable.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0314BBB0D000C2FC3C /* LabelCell+Selectable.m */; };
+		ACBD0F1E14BBB0D000C2FC3C /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0514BBB0D000C2FC3C /* LabelCell.m */; };
+		ACBD0F1F14BBB0D000C2FC3C /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBD0F0614BBB0D000C2FC3C /* NibCell.xib */; };
+		ACBD0F2014BBB0D000C2FC3C /* NibLoadedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0814BBB0D000C2FC3C /* NibLoadedCell.m */; };
+		ACBD0F2114BBB0D000C2FC3C /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0A14BBB0D000C2FC3C /* TextFieldCell.m */; };
+		ACBD0F2214BBB0D000C2FC3C /* GradientBackgroundTable.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0D14BBB0D000C2FC3C /* GradientBackgroundTable.m */; };
+		ACBD0F2314BBB0D000C2FC3C /* DetailDisclosureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */; };
+		ACBD0F2414BBB0D000C2FC3C /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F1314BBB0D000C2FC3C /* PageCell.m */; };
+		ACBD0F2514BBB0D000C2FC3C /* PageCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F1514BBB0D000C2FC3C /* PageCellBackground.m */; };
+		ACBD0F2614BBB0D000C2FC3C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F1714BBB0D000C2FC3C /* PageViewController.m */; };
+		ACBD0F2714BBB0D000C2FC3C /* RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F1A14BBB0D000C2FC3C /* RoundRect.m */; };
 		C9A42CCA12BDC88400959D84 /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A42CC912BDC88400959D84 /* NibCell.xib */; };
 		C9A42CCD12BDC9A100959D84 /* cocoawithlove-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A42CCC12BDC9A100959D84 /* cocoawithlove-logo.png */; };
-		C9A42CD012BDC9C600959D84 /* NibLoadedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42CCF12BDC9C600959D84 /* NibLoadedCell.m */; };
-		C9A42D8312BDCFCC00959D84 /* GradientBackgroundTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42D8212BDCFCC00959D84 /* GradientBackgroundTable.m */; };
-		C9A4307812BDEA3100959D84 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4307712BDEA3100959D84 /* TextFieldCell.m */; };
 		C9A4311112BE18A500959D84 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4311012BE18A500959D84 /* DetailViewController.m */; };
 		C9A4316412BE1E5D00959D84 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A4316312BE1E5D00959D84 /* DetailView.xib */; };
 /* End PBXBuildFile section */
@@ -41,24 +46,32 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TableDesignRevisited-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TableDesignRevisited-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C9A42A6812BDB17C00959D84 /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
-		C9A42A6912BDB17C00959D84 /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
-		C9A42A6A12BDB17C00959D84 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
-		C9A42A6B12BDB17C00959D84 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		C9A42A6C12BDB17C00959D84 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCell.h; sourceTree = "<group>"; };
-		C9A42A6D12BDB17C00959D84 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCell.m; sourceTree = "<group>"; };
-		C9A42B8812BDBAA100959D84 /* PageCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCellBackground.h; sourceTree = "<group>"; };
-		C9A42B8912BDBAA100959D84 /* PageCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCellBackground.m; sourceTree = "<group>"; };
-		C9A42B9112BDBC2E00959D84 /* RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRect.h; sourceTree = "<group>"; };
-		C9A42B9212BDBC2E00959D84 /* RoundRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRect.m; sourceTree = "<group>"; };
+		ACBD0EFF14BBB0D000C2FC3C /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		ACBD0F0014BBB0D000C2FC3C /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
+		ACBD0F0114BBB0D000C2FC3C /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		ACBD0F0214BBB0D000C2FC3C /* LabelCell+Selectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelCell+Selectable.h"; sourceTree = "<group>"; };
+		ACBD0F0314BBB0D000C2FC3C /* LabelCell+Selectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LabelCell+Selectable.m"; sourceTree = "<group>"; };
+		ACBD0F0414BBB0D000C2FC3C /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCell.h; sourceTree = "<group>"; };
+		ACBD0F0514BBB0D000C2FC3C /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCell.m; sourceTree = "<group>"; };
+		ACBD0F0614BBB0D000C2FC3C /* NibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibCell.xib; sourceTree = "<group>"; };
+		ACBD0F0714BBB0D000C2FC3C /* NibLoadedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibLoadedCell.h; sourceTree = "<group>"; };
+		ACBD0F0814BBB0D000C2FC3C /* NibLoadedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibLoadedCell.m; sourceTree = "<group>"; };
+		ACBD0F0914BBB0D000C2FC3C /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		ACBD0F0A14BBB0D000C2FC3C /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		ACBD0F0C14BBB0D000C2FC3C /* GradientBackgroundTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientBackgroundTable.h; sourceTree = "<group>"; };
+		ACBD0F0D14BBB0D000C2FC3C /* GradientBackgroundTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientBackgroundTable.m; sourceTree = "<group>"; };
+		ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDisclosureCell.h; sourceTree = "<group>"; };
+		ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDisclosureCell.m; sourceTree = "<group>"; };
+		ACBD0F1214BBB0D000C2FC3C /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
+		ACBD0F1314BBB0D000C2FC3C /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
+		ACBD0F1414BBB0D000C2FC3C /* PageCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCellBackground.h; sourceTree = "<group>"; };
+		ACBD0F1514BBB0D000C2FC3C /* PageCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCellBackground.m; sourceTree = "<group>"; };
+		ACBD0F1614BBB0D000C2FC3C /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		ACBD0F1714BBB0D000C2FC3C /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		ACBD0F1914BBB0D000C2FC3C /* RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRect.h; sourceTree = "<group>"; };
+		ACBD0F1A14BBB0D000C2FC3C /* RoundRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRect.m; sourceTree = "<group>"; };
 		C9A42CC912BDC88400959D84 /* NibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibCell.xib; sourceTree = "<group>"; };
 		C9A42CCC12BDC9A100959D84 /* cocoawithlove-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocoawithlove-logo.png"; sourceTree = "<group>"; };
-		C9A42CCE12BDC9C600959D84 /* NibLoadedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibLoadedCell.h; sourceTree = "<group>"; };
-		C9A42CCF12BDC9C600959D84 /* NibLoadedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibLoadedCell.m; sourceTree = "<group>"; };
-		C9A42D8112BDCFCC00959D84 /* GradientBackgroundTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientBackgroundTable.h; sourceTree = "<group>"; };
-		C9A42D8212BDCFCC00959D84 /* GradientBackgroundTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientBackgroundTable.m; sourceTree = "<group>"; };
-		C9A4307612BDEA3100959D84 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
-		C9A4307712BDEA3100959D84 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
 		C9A4310F12BE18A500959D84 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C9A4311012BE18A500959D84 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C9A4316312BE1E5D00959D84 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
@@ -81,15 +94,17 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ACBD0EFE14BBB0D000C2FC3C /* Custom Cells */,
+				ACBD0F0B14BBB0D000C2FC3C /* Custom Views */,
+				ACBD0F0E14BBB0D000C2FC3C /* Detail View */,
+				ACBD0F1114BBB0D000C2FC3C /* PageView Hierarchy */,
+				ACBD0F1814BBB0D000C2FC3C /* Utility */,
 				1D3623240D0F684500981E51 /* TableDesignRevisitedAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TableDesignRevisitedAppDelegate.m */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				C9A4310F12BE18A500959D84 /* DetailViewController.h */,
 				C9A4311012BE18A500959D84 /* DetailViewController.m */,
-				C9A4302912BDDF5300959D84 /* PageView Hierarchy */,
-				C9A4302A12BDDF6200959D84 /* Custom Cells */,
-				C9A4316212BE1DAB00959D84 /* Custom Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -106,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
-				C9A4302812BDDF3A00959D84 /* Utility */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -146,49 +160,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9A4302812BDDF3A00959D84 /* Utility */ = {
+		ACBD0EFE14BBB0D000C2FC3C /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C9A42B9112BDBC2E00959D84 /* RoundRect.h */,
-				C9A42B9212BDBC2E00959D84 /* RoundRect.m */,
-			);
-			name = Utility;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C9A4302912BDDF5300959D84 /* PageView Hierarchy */ = {
-			isa = PBXGroup;
-			children = (
-				C9A42A6812BDB17C00959D84 /* PageCell.h */,
-				C9A42A6912BDB17C00959D84 /* PageCell.m */,
-				C9A42B8812BDBAA100959D84 /* PageCellBackground.h */,
-				C9A42B8912BDBAA100959D84 /* PageCellBackground.m */,
-				C9A42A6A12BDB17C00959D84 /* PageViewController.h */,
-				C9A42A6B12BDB17C00959D84 /* PageViewController.m */,
-			);
-			name = "PageView Hierarchy";
-			sourceTree = "<group>";
-		};
-		C9A4302A12BDDF6200959D84 /* Custom Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C9A42A6C12BDB17C00959D84 /* LabelCell.h */,
-				C9A42A6D12BDB17C00959D84 /* LabelCell.m */,
-				C9A4307612BDEA3100959D84 /* TextFieldCell.h */,
-				C9A4307712BDEA3100959D84 /* TextFieldCell.m */,
-				C9A42CCE12BDC9C600959D84 /* NibLoadedCell.h */,
-				C9A42CCF12BDC9C600959D84 /* NibLoadedCell.m */,
+				ACBD0EFF14BBB0D000C2FC3C /* ButtonCell.h */,
+				ACBD0F0014BBB0D000C2FC3C /* ButtonCell.m */,
+				ACBD0F0114BBB0D000C2FC3C /* ButtonCell.xib */,
+				ACBD0F0214BBB0D000C2FC3C /* LabelCell+Selectable.h */,
+				ACBD0F0314BBB0D000C2FC3C /* LabelCell+Selectable.m */,
+				ACBD0F0414BBB0D000C2FC3C /* LabelCell.h */,
+				ACBD0F0514BBB0D000C2FC3C /* LabelCell.m */,
+				ACBD0F0614BBB0D000C2FC3C /* NibCell.xib */,
+				ACBD0F0714BBB0D000C2FC3C /* NibLoadedCell.h */,
+				ACBD0F0814BBB0D000C2FC3C /* NibLoadedCell.m */,
+				ACBD0F0914BBB0D000C2FC3C /* TextFieldCell.h */,
+				ACBD0F0A14BBB0D000C2FC3C /* TextFieldCell.m */,
 			);
 			name = "Custom Cells";
+			path = "PageView/Custom Cells";
 			sourceTree = "<group>";
 		};
-		C9A4316212BE1DAB00959D84 /* Custom Views */ = {
+		ACBD0F0B14BBB0D000C2FC3C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9A42D8112BDCFCC00959D84 /* GradientBackgroundTable.h */,
-				C9A42D8212BDCFCC00959D84 /* GradientBackgroundTable.m */,
+				ACBD0F0C14BBB0D000C2FC3C /* GradientBackgroundTable.h */,
+				ACBD0F0D14BBB0D000C2FC3C /* GradientBackgroundTable.m */,
 			);
 			name = "Custom Views";
+			path = "PageView/Custom Views";
+			sourceTree = "<group>";
+		};
+		ACBD0F0E14BBB0D000C2FC3C /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */,
+				ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */,
+			);
+			name = "Detail View";
+			path = "PageView/Detail View";
+			sourceTree = "<group>";
+		};
+		ACBD0F1114BBB0D000C2FC3C /* PageView Hierarchy */ = {
+			isa = PBXGroup;
+			children = (
+				ACBD0F1214BBB0D000C2FC3C /* PageCell.h */,
+				ACBD0F1314BBB0D000C2FC3C /* PageCell.m */,
+				ACBD0F1414BBB0D000C2FC3C /* PageCellBackground.h */,
+				ACBD0F1514BBB0D000C2FC3C /* PageCellBackground.m */,
+				ACBD0F1614BBB0D000C2FC3C /* PageViewController.h */,
+				ACBD0F1714BBB0D000C2FC3C /* PageViewController.m */,
+			);
+			name = "PageView Hierarchy";
+			path = "PageView/PageView Hierarchy";
+			sourceTree = "<group>";
+		};
+		ACBD0F1814BBB0D000C2FC3C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ACBD0F1914BBB0D000C2FC3C /* RoundRect.h */,
+				ACBD0F1A14BBB0D000C2FC3C /* RoundRect.m */,
+			);
+			name = Utility;
+			path = PageView/Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +281,8 @@
 				C9A42CCA12BDC88400959D84 /* NibCell.xib in Resources */,
 				C9A42CCD12BDC9A100959D84 /* cocoawithlove-logo.png in Resources */,
 				C9A4316412BE1E5D00959D84 /* DetailView.xib in Resources */,
+				ACBD0F1C14BBB0D000C2FC3C /* ButtonCell.xib in Resources */,
+				ACBD0F1F14BBB0D000C2FC3C /* NibCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,15 +296,18 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TableDesignRevisitedAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				C9A42A6E12BDB17C00959D84 /* PageCell.m in Sources */,
-				C9A42A6F12BDB17C00959D84 /* PageViewController.m in Sources */,
-				C9A42A7012BDB17C00959D84 /* LabelCell.m in Sources */,
-				C9A42B8A12BDBAA100959D84 /* PageCellBackground.m in Sources */,
-				C9A42B9312BDBC2E00959D84 /* RoundRect.m in Sources */,
-				C9A42CD012BDC9C600959D84 /* NibLoadedCell.m in Sources */,
-				C9A42D8312BDCFCC00959D84 /* GradientBackgroundTable.m in Sources */,
-				C9A4307812BDEA3100959D84 /* TextFieldCell.m in Sources */,
 				C9A4311112BE18A500959D84 /* DetailViewController.m in Sources */,
+				ACBD0F1B14BBB0D000C2FC3C /* ButtonCell.m in Sources */,
+				ACBD0F1D14BBB0D000C2FC3C /* LabelCell+Selectable.m in Sources */,
+				ACBD0F1E14BBB0D000C2FC3C /* LabelCell.m in Sources */,
+				ACBD0F2014BBB0D000C2FC3C /* NibLoadedCell.m in Sources */,
+				ACBD0F2114BBB0D000C2FC3C /* TextFieldCell.m in Sources */,
+				ACBD0F2214BBB0D000C2FC3C /* GradientBackgroundTable.m in Sources */,
+				ACBD0F2314BBB0D000C2FC3C /* DetailDisclosureCell.m in Sources */,
+				ACBD0F2414BBB0D000C2FC3C /* PageCell.m in Sources */,
+				ACBD0F2514BBB0D000C2FC3C /* PageCellBackground.m in Sources */,
+				ACBD0F2614BBB0D000C2FC3C /* PageViewController.m in Sources */,
+				ACBD0F2714BBB0D000C2FC3C /* RoundRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
