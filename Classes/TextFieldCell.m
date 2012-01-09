@@ -27,6 +27,7 @@
 @implementation TextFieldCell
 
 @synthesize textField;
+//@synthesize canBeSelected;
 
 //
 // dealloc
@@ -72,7 +73,9 @@
 	CGFloat heightPadding = 8;
 
 	self.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    //self.userInteractionEnabled = self.canBeSelected; 
+    
+    
     textField =
 		[[UITextField alloc]
 			initWithFrame:
@@ -130,9 +133,21 @@
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
 	label.text = [(NSDictionary *)dataObject objectForKey:@"label"];
-	textField.text = [(NSDictionary *)dataObject objectForKey:@"value"];
-	textField.placeholder = [(NSDictionary *)dataObject objectForKey:@"placeholder"];
-
+    if ([[(NSDictionary *)dataObject objectForKey:@"value"] isKindOfClass:[NSString class]])
+    {
+        textField.text = [(NSDictionary *)dataObject objectForKey:@"value"];
+    }
+    else
+    {
+        textField.text = [[(NSDictionary *)dataObject objectForKey:@"value"] stringValue];
+   
+    }
+    textField.placeholder = [(NSDictionary *)dataObject objectForKey:@"placeholder"];
+    //[textField setEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]]; //GM
+    [textField setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
+//    [self setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
+    
+    
 	textField.delegate = (PageViewController *)aTableView.delegate;
 }
 

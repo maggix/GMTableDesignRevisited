@@ -72,7 +72,7 @@
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
-	label.text = dataObject;
+	label.text = dataObject;  //TODO: gestire un dataObject di tipo Dictionary
 }
 
 

@@ -30,5 +30,6 @@
 }
 
 @property (nonatomic, retain) UITextField *textField;
+//@property (nonatomic) BOOL canBeSelected;
 
 @end

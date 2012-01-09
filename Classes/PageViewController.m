@@ -387,6 +387,11 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
 						inSection:aSectionIndex]]
 			withRowAnimation:animation];
 	}
+    
+    if (animation == UITableViewRowAnimationNone) {  
+        [self.tableView reloadData];  
+    } 
+    
 }
 
 //

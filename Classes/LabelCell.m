@@ -22,8 +22,11 @@
 //
 
 #import "LabelCell.h"
+#import "PageViewController.h"
+#import "DetailViewController.h"
 
 @implementation LabelCell
+//@synthesize CellType;
 
 //
 // configureForData:tableView:indexPath:
@@ -43,7 +46,7 @@
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
-	self.textLabel.text = dataObject;
+	self.textLabel.text = dataObject; //SIGABRT se si inizializza la LabelCell con qualcosa che non sia solo una NSString
 }
 
 @end
