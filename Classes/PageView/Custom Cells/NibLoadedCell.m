@@ -23,7 +23,7 @@
 
 #import "NibLoadedCell.h"
 #import "PageViewController.h"
-#import "DetailViewController.h"
+
 
 @implementation NibLoadedCell
 
@@ -47,11 +47,12 @@
 - (void)handleSelectionInTableView:(UITableView *)aTableView
 {
 	[super handleSelectionInTableView:aTableView];
-	
+/*	
 	NSInteger rowIndex = [aTableView indexPathForCell:self].row;
 	[((PageViewController *)aTableView.delegate).navigationController
 		pushViewController:[[[DetailViewController alloc] initWithRowIndex:rowIndex] autorelease]
 		animated:YES];
+*/
 }
 
 //

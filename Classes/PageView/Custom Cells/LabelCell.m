@@ -23,7 +23,7 @@
 
 #import "LabelCell.h"
 #import "PageViewController.h"
-#import "DetailViewController.h"
+
 
 @implementation LabelCell
 //@synthesize CellType;

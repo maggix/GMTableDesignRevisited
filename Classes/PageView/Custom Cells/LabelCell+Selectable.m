@@ -8,7 +8,7 @@
 
 #import "LabelCell+Selectable.h"
 #import "PageViewController.h"
-#import "DetailViewController.h"
+
 
 @implementation LabelCell (Selectable)
 

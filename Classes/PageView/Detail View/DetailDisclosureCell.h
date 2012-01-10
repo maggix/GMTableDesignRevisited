@@ -8,7 +8,7 @@
 
 #import "PageCell.h"
 #import "PageViewController.h"
-#import "DetailViewController.h"
+
 //#import "MBProgressHUD.h"
 
 
