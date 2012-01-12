@@ -26,8 +26,10 @@
 @interface NibLoadedCell : PageCell
 {
 	IBOutlet UILabel *label;
+    IBOutlet UIImageView *imageView; //GM 2012-01-12
 }
 
 @property (nonatomic, assign) UILabel *label;
+@property (nonatomic, assign) UIImageView *imageView;
 
 @end

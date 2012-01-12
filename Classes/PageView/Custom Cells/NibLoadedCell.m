@@ -28,6 +28,7 @@
 @implementation NibLoadedCell
 
 @synthesize label;
+@synthesize imageView;
 
 //
 // nibName
@@ -74,6 +75,7 @@
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
 	label.text = dataObject;  //TODO: gestire un dataObject di tipo Dictionary
+    imageView.image = [UIImage imageNamed:@"pdf"];
 }
 
 
