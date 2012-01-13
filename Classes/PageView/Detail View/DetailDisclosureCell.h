@@ -7,10 +7,6 @@
 //
 
 #import "PageCell.h"
-#import "PageViewController.h"
-
-//#import "MBProgressHUD.h"
-
 
 @interface DetailDisclosureCell : PageCell
 

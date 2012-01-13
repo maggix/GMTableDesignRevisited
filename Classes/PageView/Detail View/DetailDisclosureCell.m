@@ -43,7 +43,7 @@
 - (void)handleSelectionInTableView:(UITableView *)aTableView
 {
     //TODO: inviare al PARENT un selector:(showfile) per eseguire l'apertura del documento
-    
+    //Verificando prima che risponda al selector con respondsToSelector
 	[super handleSelectionInTableView:aTableView];
 	
 }
