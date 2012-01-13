@@ -27,9 +27,11 @@
 {
 	IBOutlet UILabel *label;
     IBOutlet UIImageView *imageView; //GM 2012-01-12
+    IBOutlet UILabel *titleLabel;   //GM 2012-01-12
 }
 
 @property (nonatomic, assign) UILabel *label;
 @property (nonatomic, assign) UIImageView *imageView;
+@property (nonatomic, assign) UILabel *titleLabel;
 
 @end

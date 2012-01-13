@@ -29,6 +29,7 @@
 
 @synthesize label;
 @synthesize imageView;
+@synthesize titleLabel;
 
 //
 // nibName
@@ -73,10 +74,14 @@
 	indexPath:(NSIndexPath *)anIndexPath
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
-	
-	label.text = dataObject;  //TODO: gestire un dataObject di tipo Dictionary
-    imageView.image = [UIImage imageNamed:@"pdf"];
+
+	label.text = [(NSDictionary *)dataObject objectForKey:@"labelText"];
+    imageView.image = [UIImage imageNamed:[(NSDictionary *)dataObject objectForKey:@"imageName"]];
+    titleLabel.text = [(NSDictionary *)dataObject objectForKey:@"titleLabelText"];
 }
 
 
+- (void)dealloc {
+    [super dealloc];
+}
 @end
