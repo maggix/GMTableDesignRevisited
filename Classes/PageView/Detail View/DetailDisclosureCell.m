@@ -3,7 +3,7 @@
 //  ElencoServiziCoreData
 //
 //  Created by Giovanni Maggini on 10/20/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Giovanni Maggini. All rights reserved.
 //
 
 #import "DetailDisclosureCell.h"

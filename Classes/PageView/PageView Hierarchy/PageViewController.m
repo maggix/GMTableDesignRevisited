@@ -4,6 +4,7 @@
 //
 //  Created by Matt Gallagher on 2010/01/22.
 //  Copyright 2010 Matt Gallagher. All rights reserved.
+//  Modified by Giovanni Maggini
 //
 //  This software is provided 'as-is', without any express or implied
 //  warranty. In no event will the authors be held liable for any damages
