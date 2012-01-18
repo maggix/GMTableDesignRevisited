@@ -30,7 +30,7 @@
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
     
-	self.detailTextLabel.text = [dataObject objectForKey:@"label"];
+	self.detailTextLabel.text = [dataObject objectForKey:@"label"]; //TODO: 2 volte?
 	self.textLabel.text = [dataObject objectForKey:@"label"];
     
     self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
