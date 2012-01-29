@@ -133,21 +133,30 @@
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
-	label.text = [(NSDictionary *)dataObject objectForKey:@"label"];
-    if ([[(NSDictionary *)dataObject objectForKey:@"value"] isKindOfClass:[NSString class]])
-    {
-        textField.text = [(NSDictionary *)dataObject objectForKey:@"value"];
+    if([dataObject isKindOfClass:[NSDictionary class]]){
+        label.text = [(NSDictionary *)dataObject objectForKey:@"label"];
+        if ([[(NSDictionary *)dataObject objectForKey:@"value"] isKindOfClass:[NSString class]])
+        {
+            textField.text = [(NSDictionary *)dataObject objectForKey:@"value"];
+        }
+        else
+        {
+            textField.text = [[(NSDictionary *)dataObject objectForKey:@"value"] stringValue];
+       
+        }
+        textField.placeholder = [(NSDictionary *)dataObject objectForKey:@"placeholder"];
+        
+        if([(NSDictionary *)dataObject objectForKey:@"editable"])
+        {
+            [textField setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
+//            [textField setEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]]; //GM
+//            [self setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
+        }
     }
     else
     {
-        textField.text = [[(NSDictionary *)dataObject objectForKey:@"value"] stringValue];
-   
+        textField.text = (NSString*)dataObject;
     }
-    textField.placeholder = [(NSDictionary *)dataObject objectForKey:@"placeholder"];
-    //[textField setEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]]; //GM
-    [textField setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
-//    [self setUserInteractionEnabled:[[(NSDictionary *)dataObject objectForKey:@"editable"] boolValue]];
-    
     
 	textField.delegate = (PageViewController *)aTableView.delegate;
 }

@@ -48,9 +48,15 @@
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
 //	self.textLabel.text =   dataObject; //!!! //SIGABRT se si inizializza la LabelCell con qualcosa che non sia solo una NSString //TODO: non usare primitives nel NSDictionary che si passa
-    self.textLabel.text = [dataObject objectForKey:@"label"];
-    if ([dataObject objectForKey:@"displayDisclosureIndicator"]) {
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if([dataObject isKindOfClass:[NSDictionary class]]){
+        self.textLabel.text = [dataObject objectForKey:@"label"];
+        if ([dataObject objectForKey:@"displayDisclosureIndicator"]) {
+            self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    else
+    {
+        self.textLabel.text = (NSString*)dataObject;
     }
 }
 
