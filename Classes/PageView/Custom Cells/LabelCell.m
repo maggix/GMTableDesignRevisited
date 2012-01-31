@@ -27,7 +27,7 @@
 
 
 @implementation LabelCell
-//@synthesize CellType;
+@synthesize action;
 
 //
 // configureForData:tableView:indexPath:
@@ -47,12 +47,20 @@
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
 	
-//	self.textLabel.text =   dataObject; //!!! //SIGABRT se si inizializza la LabelCell con qualcosa che non sia solo una NSString //TODO: non usare primitives nel NSDictionary che si passa
     if([dataObject isKindOfClass:[NSDictionary class]]){
         self.textLabel.text = [dataObject objectForKey:@"label"];
         if ([dataObject objectForKey:@"displayDisclosureIndicator"]) {
             self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
+        if ([dataObject objectForKey:@"action"])
+        {
+            self.action = [(NSDictionary*)dataObject objectForKey:@"action"];
+        }
+        else
+        {
+            self.action = @"";
+        }
+        
     }
     else
     {

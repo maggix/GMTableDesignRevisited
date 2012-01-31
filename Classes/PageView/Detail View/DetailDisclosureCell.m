@@ -31,22 +31,25 @@
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
     
 //	self.detailTextLabel.text = [dataObject objectForKey:@"label"]; //TODO: 2 volte?
-	self.textLabel.text = [dataObject objectForKey:@"label"];
-    
-    self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    self.action = [dataObject objectForKey:@"action"];
-    //Todo: aggiungere in seguito
-    
+    if([dataObject isKindOfClass:[NSDictionary class]])
+    {
+        self.textLabel.text = [dataObject objectForKey:@"label"];
+        
+        self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        self.action = [dataObject objectForKey:@"action"];
+    }
+    else
+    {
+        self.textLabel.text = dataObject;
+    }
 
 }
 
-- (void)handleSelectionInTableView:(UITableView *)aTableView
-{
-    //TODO: inviare al PARENT un selector:(showfile) per eseguire l'apertura del documento
-    //Verificando prima che risponda al selector con respondsToSelector
-	[super handleSelectionInTableView:aTableView];
-	
-}
+
+//- (void)handleSelectionInTableView:(UITableView *)aTableView
+//{
+//	[super handleSelectionInTableView:aTableView];	
+//}
 
 
 

@@ -28,6 +28,7 @@
 {
 
 }
-//@property(nonatomic,retain) NSString* CellType;
+@property (nonatomic, retain) NSString* action;
+
 
 @end

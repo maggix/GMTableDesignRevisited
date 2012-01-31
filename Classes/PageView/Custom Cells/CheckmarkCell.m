@@ -9,6 +9,7 @@
 #import "CheckmarkCell.h"
 
 @implementation CheckmarkCell
+@synthesize checked, value;
 
 //
 // configureForData:tableView:indexPath:
@@ -27,28 +28,43 @@
                indexPath:(NSIndexPath *)anIndexPath
 {
 	[super configureForData:dataObject tableView:aTableView indexPath:anIndexPath];
-    
-	self.textLabel.text = dataObject;
-    //TODO: la cella deve contenere una proprietà (come la textfieldcell) che indica il valore relativo alla checkmark
-    //TODO: impostare le proprietà con un NSDictionary
-    
-    self.accessoryType = UITableViewCellAccessoryCheckmark;
-    
 
-    //Todo: aggiungere in seguito
-    
+    if([dataObject isKindOfClass:[NSDictionary class]])
+    {
+        self.textLabel.text = [(NSDictionary*)dataObject objectForKey:@"label"];
+        if([dataObject objectForKey:@"value"])
+        {
+            self.value = [(NSDictionary*)dataObject objectForKey:@"value"];
+        }
+        if ([dataObject objectForKey:@"checked"]) {
+            
+            self.checked = [[(NSDictionary*)dataObject objectForKey:@"checked"] boolValue];
+            if (checked)
+            {
+                self.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+        }
+    }
+    else
+    {
+        self.textLabel.text = dataObject;
+    }
     
 }
 
-- (void)handleSelectionInTableView:(UITableView *)aTableView
-{
-    //TODO: inviare al PARENT un selector:(showfile) per eseguire l'apertura del documento
-    //Verificando prima che risponda al selector con respondsToSelector
-	[super handleSelectionInTableView:aTableView];
-    //Selected -> toggle Accessory
-    //TODO: in parent, set checkmark value true/false
-	
-}
+//- (void)handleSelectionInTableView:(UITableView *)aTableView
+//{
+//	[super handleSelectionInTableView:aTableView];
+//
+//    if(self.accessoryType == UITableViewCellAccessoryCheckmark)
+//    {
+//        self.accessoryType = UITableViewCellAccessoryNone;
+//    }
+//    else if(self.accessoryType == UITableViewCellAccessoryNone)
+//    {
+//        self.accessoryType = UITableViewCellAccessoryCheckmark;
+//    }
+//}
 
 /*
  //http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/ManageSelections/ManageSelections.html#//apple_ref/doc/uid/TP40007451-CH9-SW6

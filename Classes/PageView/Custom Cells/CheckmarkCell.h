@@ -10,4 +10,7 @@
 
 @interface CheckmarkCell : PageCell
 
+@property (nonatomic) BOOL checked;
+@property (nonatomic, retain) NSString* value;
+
 @end
