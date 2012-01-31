@@ -39,7 +39,7 @@ static CGGradientRef PageCellBackgroundGradient(BOOL selected)
 		UIColor *contentColorBottom;
 		if (selected)
 		{
-			contentColorTop = [UIColor colorWithRed:0.70 green:0.82 blue:0.0 alpha:1.0];
+			contentColorTop = [UIColor colorWithRed:0.106 green:0.42 blue:1 alpha:1]; /*#1b6bff*/ // [UIColor colorWithRed:0.70 green:0.82 blue:0.0 alpha:1.0];
 			contentColorBottom = [UIColor blueColor]; //[UIColor colorWithRed:0.95 green:0.90 blue:0.0 alpha:1.0];
 		}
 		else
