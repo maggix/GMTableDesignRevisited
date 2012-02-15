@@ -60,6 +60,16 @@
         {
             self.action = @"";
         }
+        if ([dataObject objectForKey:@"image"]) {
+            self.imageView.image = [UIImage imageNamed:[dataObject objectForKey:@"image"]];
+            NSString *highlightedImage = [NSString stringWithFormat:@"%@-pressed",[dataObject objectForKey:@"image"]];
+            NSString *path = [[NSBundle mainBundle] pathForResource:highlightedImage ofType:@"png"];
+            if (path) {
+                self.imageView.highlightedImage = [UIImage imageNamed:highlightedImage];
+            }
+            [highlightedImage release];
+            [path release];
+        }
         
     }
     else
