@@ -67,7 +67,7 @@
             if (path) {
                 self.imageView.highlightedImage = [UIImage imageNamed:highlightedImage];
             }
-            [highlightedImage release];
+//            [highlightedImage release];
             [path release];
         }
         
