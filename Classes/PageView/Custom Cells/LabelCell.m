@@ -68,7 +68,7 @@
                 self.imageView.highlightedImage = [UIImage imageNamed:highlightedImage];
             }
 //            [highlightedImage release];
-            [path release];
+//            [path release];
         }
         
     }
