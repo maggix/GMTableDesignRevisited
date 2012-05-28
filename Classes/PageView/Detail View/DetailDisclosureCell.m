@@ -33,7 +33,8 @@
     {
         self.textLabel.text = [dataObject objectForKey:@"label"];
         
-        self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+//        self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.action = [dataObject objectForKey:@"action"];
     }
     else

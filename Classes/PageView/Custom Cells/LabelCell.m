@@ -49,8 +49,15 @@
 	
     if([dataObject isKindOfClass:[NSDictionary class]]){
         self.textLabel.text = [dataObject objectForKey:@"label"];
+        
+        if ([dataObject objectForKey:@"detailLabel"]) {
+            self.detailTextLabel.text = [dataObject objectForKey:@"detailLabel"];
+        }
         if ([dataObject objectForKey:@"displayDisclosureIndicator"]) {
             self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        if ([dataObject objectForKey:@"displayDetailDisclosureButton"]) {
+            self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         }
         if ([dataObject objectForKey:@"action"])
         {
