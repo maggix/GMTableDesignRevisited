@@ -26,6 +26,7 @@
 #import "TextFieldCell.h"
 #import "NibLoadedCell.h"
 #import "GradientBackgroundTable.h"
+#import "CheckmarkCell.h"
 
 @implementation RootViewController
 
@@ -65,8 +66,15 @@
 		[self
 			appendRowToSection:1
 			cellClass:[NibLoadedCell class]
-			cellData:[NSString stringWithFormat:
-				NSLocalizedString(@"This is row %ld", @""), i + 1]
+         cellData:[NSDictionary dictionaryWithObjectsAndKeys:
+                   [NSString stringWithFormat:
+                   NSLocalizedString(@"This is row %ld", @""), i + 1],
+                   @"labelText",
+                   [NSString stringWithString:@"cocoawithlove-logo"],
+                   @"imageName",
+                   [NSString stringWithString:@"Cell Title"],
+                   @"titleLabelText",
+                   nil]
 			withAnimation:(i % 2) == 0 ?
 				UITableViewRowAnimationLeft :
 				UITableViewRowAnimationRight];
@@ -91,6 +99,19 @@
 				UITableViewRowAnimationLeft :
 				UITableViewRowAnimationRight];
 	}
+    [self addSectionAtIndex:3 withAnimation:UITableViewRowAnimationFade];
+	for (NSInteger i = 0; i < 4; i++)
+	{
+		[self
+         appendRowToSection:3
+         cellClass:[CheckmarkCell class]
+         cellData:[NSString stringWithFormat:
+                   NSLocalizedString(@"This is row %ld", @""), i + 1]
+         withAnimation:(i % 2) == 0 ?
+         UITableViewRowAnimationLeft :
+         UITableViewRowAnimationRight];
+	}
+
 	[self hideLoadingIndicator];
 }
 
@@ -156,6 +177,13 @@
 	}
 }
 
+/*
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 3; // Undocumented constant
+//    http://stackoverflow.com/questions/308081/is-it-possible-to-configure-a-uitableview-to-allow-multiple-selection
+}
+*/
+
 //
 // tableView:titleForHeaderInSection:
 //
@@ -182,7 +210,10 @@
 	{
 		return NSLocalizedString(@"Some editable text fields", nil);
 	}
-
+	else if (section == 3)
+	{
+		return NSLocalizedString(@"Some checkmark cells", nil);
+	}
 	return nil;
 }
 

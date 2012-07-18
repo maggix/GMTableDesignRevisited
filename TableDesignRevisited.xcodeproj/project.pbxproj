@@ -14,6 +14,7 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		AC66CEA614C066350098E1F1 /* CheckmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC66CEA514C066350098E1F1 /* CheckmarkCell.m */; };
 		ACBD0F1B14BBB0D000C2FC3C /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0014BBB0D000C2FC3C /* ButtonCell.m */; };
 		ACBD0F1C14BBB0D000C2FC3C /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBD0F0114BBB0D000C2FC3C /* ButtonCell.xib */; };
 		ACBD0F1D14BBB0D000C2FC3C /* LabelCell+Selectable.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBD0F0314BBB0D000C2FC3C /* LabelCell+Selectable.m */; };
@@ -46,6 +47,8 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TableDesignRevisited-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TableDesignRevisited-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AC66CEA414C066340098E1F1 /* CheckmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckmarkCell.h; sourceTree = "<group>"; };
+		AC66CEA514C066350098E1F1 /* CheckmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckmarkCell.m; sourceTree = "<group>"; };
 		ACBD0EFF14BBB0D000C2FC3C /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
 		ACBD0F0014BBB0D000C2FC3C /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		ACBD0F0114BBB0D000C2FC3C /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
@@ -60,8 +63,8 @@
 		ACBD0F0A14BBB0D000C2FC3C /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
 		ACBD0F0C14BBB0D000C2FC3C /* GradientBackgroundTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientBackgroundTable.h; sourceTree = "<group>"; };
 		ACBD0F0D14BBB0D000C2FC3C /* GradientBackgroundTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientBackgroundTable.m; sourceTree = "<group>"; };
-		ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDisclosureCell.h; sourceTree = "<group>"; };
-		ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDisclosureCell.m; sourceTree = "<group>"; };
+		ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailDisclosureCell.h; path = "../Detail View/DetailDisclosureCell.h"; sourceTree = "<group>"; };
+		ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailDisclosureCell.m; path = "../Detail View/DetailDisclosureCell.m"; sourceTree = "<group>"; };
 		ACBD0F1214BBB0D000C2FC3C /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
 		ACBD0F1314BBB0D000C2FC3C /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
 		ACBD0F1414BBB0D000C2FC3C /* PageCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCellBackground.h; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 			children = (
 				ACBD0EFE14BBB0D000C2FC3C /* Custom Cells */,
 				ACBD0F0B14BBB0D000C2FC3C /* Custom Views */,
-				ACBD0F0E14BBB0D000C2FC3C /* Detail View */,
 				ACBD0F1114BBB0D000C2FC3C /* PageView Hierarchy */,
 				ACBD0F1814BBB0D000C2FC3C /* Utility */,
 				1D3623240D0F684500981E51 /* TableDesignRevisitedAppDelegate.h */,
@@ -175,6 +177,10 @@
 				ACBD0F0814BBB0D000C2FC3C /* NibLoadedCell.m */,
 				ACBD0F0914BBB0D000C2FC3C /* TextFieldCell.h */,
 				ACBD0F0A14BBB0D000C2FC3C /* TextFieldCell.m */,
+				AC66CEA414C066340098E1F1 /* CheckmarkCell.h */,
+				AC66CEA514C066350098E1F1 /* CheckmarkCell.m */,
+				ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */,
+				ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */,
 			);
 			name = "Custom Cells";
 			path = "PageView/Custom Cells";
@@ -188,16 +194,6 @@
 			);
 			name = "Custom Views";
 			path = "PageView/Custom Views";
-			sourceTree = "<group>";
-		};
-		ACBD0F0E14BBB0D000C2FC3C /* Detail View */ = {
-			isa = PBXGroup;
-			children = (
-				ACBD0F0F14BBB0D000C2FC3C /* DetailDisclosureCell.h */,
-				ACBD0F1014BBB0D000C2FC3C /* DetailDisclosureCell.m */,
-			);
-			name = "Detail View";
-			path = "PageView/Detail View";
 			sourceTree = "<group>";
 		};
 		ACBD0F1114BBB0D000C2FC3C /* PageView Hierarchy */ = {
@@ -308,6 +304,7 @@
 				ACBD0F2514BBB0D000C2FC3C /* PageCellBackground.m in Sources */,
 				ACBD0F2614BBB0D000C2FC3C /* PageViewController.m in Sources */,
 				ACBD0F2714BBB0D000C2FC3C /* RoundRect.m in Sources */,
+				AC66CEA614C066350098E1F1 /* CheckmarkCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
