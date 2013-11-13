@@ -191,8 +191,18 @@ static CGGradientRef PageCellBackgroundGradient(BOOL selected)
 - (void)drawRect:(CGRect)rect
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	
-	const CGFloat PageCellBackgroundRadius = 10.0;
+	CGFloat PageCellBackgroundRadius;
+    
+    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (version >= 7.0) {
+        PageCellBackgroundRadius = 0.0;
+
+    }
+    else{
+        PageCellBackgroundRadius = 10.0;
+
+    }
+    
 	if (groupBackground)
 	{
 		if (position != PageCellGroupPositionTop &&
